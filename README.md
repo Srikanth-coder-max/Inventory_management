@@ -1,3 +1,71 @@
+# Inventory Management
+
+A simple inventory management web application built with Next.js, Prisma, and Redis.
+
+## Features
+
+- User authentication
+- Product catalog
+- Reservations and stock management
+
+## Requirements
+
+- Node.js 18+ (or compatible)
+- npm or pnpm
+- A PostgreSQL/MySQL/SQLite database supported by Prisma
+- Redis (optional, used for locking/idempotency)
+
+## Quick start
+
+1. Install dependencies
+
+```bash
+npm install
+# or: pnpm install
+```
+
+2. Create environment file
+
+```bash
+cp .env.example .env
+# Edit .env to set DATABASE_URL, NEXTAUTH_SECRET, REDIS_URL, etc.
+```
+
+3. Run Prisma migrations and seed (if applicable)
+
+```bash
+npx prisma migrate dev --name init
+npx prisma db seed
+```
+
+4. Run development server
+
+```bash
+npm run dev
+# or: pnpm dev
+```
+
+## Useful scripts
+
+- `dev` — start Next.js in development mode
+- `build` — build for production
+- `start` — run production build
+
+## Project structure
+
+- `app/` — Next.js app routes and pages
+- `lib/` — server-side helpers (Prisma, Redis, utilities)
+- `components/` — React components
+- `prisma/` — Prisma schema and seeds
+
+## Notes
+
+- Ensure `DATABASE_URL` and any required auth secrets are set before running migrations.
+- If you plan to push commits to GitHub, ensure your repository remote (`origin`) is configured and you have push access.
+
+---
+
+If you want any extra sections (badges, CI setup, contributing guide), tell me and I can add them.
 # StockFlow — Multi-Warehouse Inventory & D2C Order-Fulfillment Platform
 
 A production-grade inventory management and order-fulfillment system for multi-warehouse retail and D2C brands. Built to solve real-world stock race conditions using a short-lived reservation system with ACID-compliant pessimistic locking and Redis distributed locks.
