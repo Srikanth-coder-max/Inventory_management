@@ -81,7 +81,7 @@ A production-grade inventory management and order-fulfillment system for multi-w
 | ORM & DB      | Prisma + PostgreSQL (Supabase / Neon)   |
 | Caching/Lock  | Upstash Redis                           |
 | Styling       | Tailwind CSS (v4)                       |
-| Validation    | Hand-rolled TypeScript type guards (no Zod) |
+| Validation    | Hand-rolled TypeScript type guards  |
 
 ---
 
